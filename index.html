@@ -95,7 +95,6 @@
         <button class="nav-btn active" data-page="chat">💬 Chat</button>
         <button class="nav-btn" data-page="tools">🧠 Tools</button>
         <button class="nav-btn" data-page="dashboard">📊 Dashboard</button>
-        <button class="nav-btn" data-page="settings">⚙️ Settings</button>
       </nav>
     </div>
 
@@ -166,19 +165,6 @@
             </div>
           </div>
         </div>
-
-        <div id="settings" class="page">
-          <div style="background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03);border-radius:var(--radius);padding:16px;max-width:500px">
-            <h3 style="margin-top:0">Settings</h3>
-            <label style="display:flex;gap:8px;align-items:center;margin-bottom:12px">
-              <input type="checkbox" id="darkMode" checked /> Dark Mode
-            </label>
-            <label style="display:flex;gap:8px;align-items:center;margin-bottom:12px">
-              <input type="checkbox" id="notifications" checked /> Notifications
-            </label>
-            <button type="button" onclick="clearData()" style="background:var(--danger);color:white;border:0;padding:8px 12px;border-radius:8px">Clear All Data</button>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -198,7 +184,7 @@
         btn.classList.add('active');
         const page = btn.dataset.page;
         document.getElementById(page).classList.add('active');
-        const titles = { chat:'Chat',tools:'Tools',dashboard:'Dashboard',settings:'Settings' };
+        const titles = { chat:'Chat', tools:'Tools', dashboard:'Dashboard' };
         document.getElementById('pageTitle').textContent = titles[page];
       });
     });
